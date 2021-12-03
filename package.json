@@ -8,17 +8,19 @@
     "build": "npm run prepare && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --max-warnings=0 src",
+    "lint": "eslint --max-warnings=0 src; npx flow",
     "prepare": "husky install"
   },
   "dependencies": {
-    "@babel/core": "^7.16.0",
     "immer": "^9.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "web-vitals": "^2.1.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-flow": "^7.16.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.11",
     "@types/react": "^17.0.37",
@@ -35,6 +37,7 @@
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "flow-bin": "^0.166.1",
     "husky": "^7.0.4",
     "prettier": "^1.19.1",
     "react-scripts": "^4.0.3",
