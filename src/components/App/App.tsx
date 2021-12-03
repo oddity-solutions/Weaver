@@ -1,24 +1,17 @@
 import React from 'react';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { PATHS } from '../../constants/paths';
 
-
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App"> <header className="App-header"> <img src="/logo.svg" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      {/* <Route path="*" element={<HomePage />} />; */}
+      {Object.entries(PATHS).map(([key, Value]) => {
+        return <Route path={key} key={key} element={<Value />} />;
+      })}
+    </Routes>
   );
-}
+};
 
 export default App;
