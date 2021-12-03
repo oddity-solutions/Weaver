@@ -1,0 +1,68 @@
+
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 8,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": "./tsconfig.json"
+    },
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "extends": [
+        "airbnb",
+        "airbnb-typescript",
+        "prettier",
+        "prettier/react",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+        "react-hooks",
+        "@typescript-eslint"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+      "import/prefer-default-export": "off",
+      "no-duplicate-imports": 1,
+      "comma-dangle": [2, "always-multiline"],
+      "object-shorthand": [2, "always", {
+          "ignoreConstructors": false,
+          "avoidQuotes": false, // this is the override vs airbnb
+      }],
+      "max-len": [2, 120, {
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true,
+          "ignoreComments": true
+      }],
+      "consistent-return": 0,
+      "prefer-destructuring": [2, { "array": false, "object": false }, { "enforceForRenamedProperties": false }],
+      "no-plusplus": 0,
+      "no-param-reassign": 1,
+      "no-unreachable-loop": 1, // TODO: enable
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+     ]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "moduleDirectory": ["node_modules"]
+        }
+      }
+    }
+  }
