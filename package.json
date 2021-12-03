@@ -5,15 +5,11 @@
   "main": "src/pages/index.tsx",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run prepare && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --max-warnings=0 src"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "eslint --max-warnings=0 src"
-    }
+    "lint": "eslint --max-warnings=0 src",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",

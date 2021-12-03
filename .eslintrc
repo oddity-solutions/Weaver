@@ -26,6 +26,7 @@
         "react-hooks",
         "@typescript-eslint"
     ],
+    "ignorePatterns": ["react-app-env.d.ts"],
     "rules": {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
