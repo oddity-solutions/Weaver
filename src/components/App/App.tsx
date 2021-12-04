@@ -6,7 +6,6 @@ import { PATHS } from '../../constants/paths';
 const App: React.FC = () => {
   return (
     <Routes>
-      {/* <Route path="*" element={<HomePage />} />; */}
       {Object.entries(PATHS).map(([key, Value]) => {
         return <Route path={key} key={key} element={<Value />} />;
       })}
